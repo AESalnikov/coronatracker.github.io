@@ -28,7 +28,8 @@ public class CoronaDataService {
 
     @PostConstruct
 //   <minute> <hour> <day-of-month> <month> <day-of-week> <command>
-    @Scheduled(cron = "* 9 * * * *") // запуск каждый день в 9:00
+//    @Scheduled(cron = "* 9 * * * *") // запуск каждый день в 9:00
+    @Scheduled(cron = "*/30 * * * *") // запуск каждые 30 минут для работы на бесплатном хостинге
     public void fetchCoronaData() throws IOException {
 //        RestTemplate restTemplate = new RestTemplate();
 //        final String stringPosts = restTemplate.getForObject(CORONA_DATA_URL, String.class);
